@@ -38,7 +38,13 @@ You can change domain specific information for this algorithm by editing config 
 * constraints for fit/feat functions
 When making a new domain you will need to create a new config file and add a flag to all scripts that call on the domain information. (See the first few lines of sail script)
 
-## Data capture and return values
+## Return values
+The main function sail, in sail.py returns a prediction_map and a fitness value. It may be useful to ignore the prediction maps, and just harvest the fitness
+```
+_ , fitness = sail( my arguments )
+```
+
+## Data capture
 The sail script keeps a running pickle of all observed points in a time-stamped folder. This can be used to analyze the quality of the results from the sail algorithm. In addition to this, a human readable file called DC, a pickle file of all data and an iteratively updated map are saved.
 
 The main pickle file BDC can be harvested with the following script contains the following data:
