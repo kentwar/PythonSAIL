@@ -1,4 +1,4 @@
-# pySAIL vs BOP-Elites
+# pySAIL
 a working repository for a port of the SAIL algorithm by Adam Gaier
  
 original MATLAB : https://github.com/agaier/sail_ecj2018
@@ -7,12 +7,18 @@ original MATLAB : https://github.com/agaier/sail_ecj2018
 #### Description
 Surrogate Assisted Illumination 'SAIL' is a QD search algorithm utilising the power of Gaussian Process predictive modelling and the efficacy of the map-elites algorithm to search for high performing (in the fitness evaluation) points from a diverse (in the feature space) set of points. 
 
-BOP-Elites is a fully Bayesian Optimisation approach to the quality diversity problem, using an adapted version of the popular Expected Improvement algorithm
 
-#### How to use:
-More to come
+# How to use:
 
-## Tweaking pySAIL
+## Install dependencies
+from the terminal type :
+'pip install -r requirements.txt'
+
+## Running for the first time. 
+you can run a test with  
+'python sail.py --init 100 --max 110' 
+
+## Adding a Domain
 You can change domain specific information for this algorithm by editing config files in the domain folder, or add your own. Config files should include
 * Feature functions
 * Fitness Functions
